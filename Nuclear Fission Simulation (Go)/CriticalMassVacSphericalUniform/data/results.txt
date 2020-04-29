@@ -1,0 +1,5 @@
+Critical mass of spherical 100% U-235 Sphere with thermal neutrons, r = 0.000696405037099589 meters
+asymptote, k = 1.8069327000000002 ± 0.010279110891025539
+
+Critical mass pf spherical 100% U-235 Sphere with fast neutrons, r = 0.17624401616101246 meters
+asymptote, k = 2.0810221 ± 0.008367757261656188

@@ -1,0 +1,57 @@
+// * From Neutron.go (CriticalMass Vacuum Spherical Uniform)
+//func (n *Neutron) moveOld() {
+//	deltaDistance := n.randomDistance()
+//
+//	//fmt.Printf("Delta Step distance: %v\n", deltaDistance)
+//
+//	deltaVector := n.directionVector.multiplyBy(deltaDistance)
+//	n.stepVector = n.stepVector.addVector(deltaVector)
+//	n.positionVector = n.positionVector.addVector(deltaVector)
+//
+//	distance := n.stepVector.magnitude()
+//
+//	n.medium = n.getCurrentMedium(n.s)
+//	//n.printCurrentMedium()
+//
+//	//fmt.Print("Step Vector")
+//	//n.stepVector.print()
+//	//
+//	//fmt.Printf("Step Magnitude: %v\n", n.stepVector.magnitude())
+//
+//
+//	if n.getCurrentMedium(n.s) == u235 {
+//		pScatter := n.probabilityForDistance(distance, scatterLambdaU235)
+//		pAbsorb := n.probabilityForDistance(distance, absorbLambdaU235)
+//		pFission := n.probabilityForDistance(distance, fissionLambdaU235)
+//
+//		pTotal := pScatter + pAbsorb + pFission
+//
+//		//fmt.Printf("pTotal = %v\n", pTotal)
+//
+//		//fmt.Println(pScatter / pTotal, pAbsorb / pTotal, pFission / pTotal)
+//		//fmt.Println(scatterLambdaU235, absorbLambdaU235, fissionLambdaU235)
+//
+//		a := rand.Float64() * pTotal
+//		if a <= pScatter {
+//			n.state = scatter
+//		} else if a <= (pScatter + pAbsorb) {
+//			n.state = absorb
+//		} else if a <= (pScatter + pAbsorb + pFission) {
+//			n.state = fission
+//		} else {
+//			n.state = nothing
+//		}
+//	}
+//
+//	if n.state != nothing {
+//		n.stepVector = Vector{0,0,0}
+//		n.directionVector = newRandomUnitVector()
+//	}
+//
+//	if (n.state == absorb) || (n.state == fission) || (n.medium == empty){
+//		n.isFree = false
+//	}
+//
+//	//n.printState()
+//	//fmt.Println("Medium: ", n.medium)
+//}
